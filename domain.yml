@@ -1,0 +1,76 @@
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true
+intents:
+- exercise_per
+- greet
+- fine_normal
+- fine_ask
+- goodbye
+- mood_unhappy
+- bot_challenge
+- advice
+- thanks
+- are_you_sure
+- deny
+- affirm
+
+entities:
+- exercise
+- yoga
+- body
+slots:
+  exercise:
+    type: text
+  yoga:
+    type: unfeaturized
+templates:
+  utter_default:
+  - text: I am not sure what you're aiming for
+  - text: I am sorry but I am not able to get you.
+  - text: My appologies but I am not able to get you
+  - text: Sorry, I did not understand you
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_exercise_per:
+  - image: http://www.yogicwayoflife.com/wp-content/uploads/2015/09/Padmasana_Lotus_Pose_Yoga_Meditation_Asana.jpg
+    text: This is Padmasana
+  utter_goodbye:
+  - text: Talk to you later!
+  - text: Have a good day.
+  - text: Until next time!
+  - text: Bye, it was nice talking to you!
+  utter_greet:
+  - text: Hey! How are you?
+  - text: Hello, How are you doing?
+  utter_help:
+  - text: Great. How can I help you?
+  - text: Great. Tell me How can I help you?
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_reply:
+  - text: I'm doing great. Please let me know what I can do for you.
+  - text: I'm doing great. Tell me How can I help you today?
+  utter_thank:
+  - text: You are welcome. Let me know if there is anything else I can help you with.
+  - text: Glad you liked my service.Let me know if there is anything else I can help
+      you with.
+  utter_proceed:
+  - text: Do you wish to continue?
+    buttons:
+    - title: Proceed
+      payload: /affirm
+    - title: Not-Proceed
+      payload: /deny
+actions:
+- action_hello_world
+- utter_default
+- utter_did_that_help
+- utter_exercise_per
+- utter_goodbye
+- utter_greet
+- utter_help
+- utter_iamabot
+- utter_reply
+- utter_thank
+- utter_proceed

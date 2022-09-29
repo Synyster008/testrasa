@@ -1,0 +1,67 @@
+actions:
+- action_hello_world
+- utter_cheer_up
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_inform
+- utter_yogaposes
+config:
+  store_entities_as_slots: true
+entities: []
+forms: []
+intents:
+- greet:
+    ignore_entities: []
+    use_entities: true
+- goodbye:
+    ignore_entities: []
+    use_entities: true
+- affirm:
+    ignore_entities: []
+    use_entities: true
+- deny:
+    ignore_entities: []
+    use_entities: true
+- mood_great:
+    ignore_entities: []
+    use_entities: true
+- mood_unhappy:
+    ignore_entities: []
+    use_entities: true
+- bot_challenge:
+    ignore_entities: []
+    use_entities: true
+- yoga:
+    ignore_entities: []
+    use_entities: true
+- inform:
+    ignore_entities: []
+    use_entities: true
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots: {}
+templates:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_yogaposes:
+  - text: Sounds good!
+  - image: https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.yogicwayoflife.com%2Fwp-content%2Fuploads%2F2015%2F09%2FPadmasana_Lotus_Pose_Yoga_Meditation_Asana.jpg&imgrefurl=https%3A%2F%2Fwww.yogicwayoflife.com%2Fpadmasana-lotus-pose-for-meditation%2F&docid=-leHDYP4KGvXyM&tbnid=sNWhQkAXQDsQuM%3A&vet=10ahUKEwjwoMLrluLmAhVWILcAHXHJApsQMwiIASgeMB4..i&w=512&h=512&bih=657&biw=1366&q=The%20Lotus%20Pose&ved=0ahUKEwjwoMLrluLmAhVWILcAHXHJApsQMwiIASgeMB4&iact=mrc&uact=8
+    text: 'Lets start with the most basic ones... '
+  - text: This is Padmasana pose also known as the lotus pose
+  - text: Go ahead and give it a try!
+  - text: Were you be able to perform it?
